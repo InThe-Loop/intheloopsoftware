@@ -3,9 +3,11 @@
 namespace app\Controllers;
 
 require "./vendor/autoload.php";
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
 /**
  * PHP email class
@@ -21,6 +23,9 @@ class MailController {
      * Class constructor
      */
     public function __construct() {
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+        
         // Create an email instance;
         // passing `true` enables exceptions
         $this->mail = new PHPMailer(true);
@@ -29,11 +34,11 @@ class MailController {
         // Enable verbose debug output
         // $this->mail->SMTPDebug = SMTP::DEBUG_SERVER;
         // Set the SMTP server to send through
-        $this->mail->Host = 'mail.missveefamouslook.store';
+        $this->mail->Host = $_ENV['SMTP_HOST'];
         // Enable SMTP authentication
         $this->mail->SMTPAuth = true;
-        $this->mail->Username = 'daniel@missveefamouslook.store';
-        $this->mail->Password = 'tdM4th3bul4!';
+        $this->mail->Username = $_ENV['SMTP_USER'];
+        $this->mail->Password = $_ENV['SMTP_PASS'];
         // Enable implicit TLS encryption
         $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         // use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`

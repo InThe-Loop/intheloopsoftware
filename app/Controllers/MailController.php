@@ -25,7 +25,7 @@ class MailController {
     public function __construct() {
         $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
         $dotenv->load();
-        
+
         // Create an email instance;
         // passing `true` enables exceptions
         $this->mail = new PHPMailer(true);
@@ -55,10 +55,10 @@ class MailController {
      */
     public function sendEmail(array $email_details, $file_name = null) {
         try {
-            $this->mail->setFrom('daniel@missveefamouslook.store', 'InTheLoop Help and support');
+            $this->mail->setFrom($_ENV['CONTACT_FROM'], $_ENV['CONTACT_NAME']);
             $this->mail->addAddress(strtolower($email_details['email']), ucwords($email_details['name']));
-            $this->mail->addReplyTo('daniel@missveefamouslook.store', 'InTheLoop Help and support');
-            $this->mail->addBCC('daniel@missveefamouslook.store', 'InTheLoop Help and support');
+            $this->mail->addReplyTo($_ENV['CONTACT_FROM'], $_ENV['CONTACT_NAME']);
+            $this->mail->addBCC($_ENV['CONTACT_FROM'], $_ENV['CONTACT_NAME']);
             $this->mail->isHTML(true);
             $this->mail->Subject = $email_details['subject'];
             if ($file_name) {$this->mail->AddAttachment($file_name);}

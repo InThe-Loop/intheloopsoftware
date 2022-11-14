@@ -23,7 +23,7 @@ class MailController {
      * Class constructor
      */
     public function __construct() {
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv = Dotenv::createImmutable(__DIR__ . '\..\..');
         $dotenv->load();
 
         // Create an email instance;
@@ -37,8 +37,6 @@ class MailController {
         $this->mail->Host = $_ENV['SMTP_HOST'];
         // Enable SMTP authentication
         $this->mail->SMTPAuth = true;
-        $this->mail->Username = $_ENV['SMTP_USER'];
-        $this->mail->Password = $_ENV['SMTP_PASS'];
         // Enable implicit TLS encryption
         $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         // use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -55,13 +53,18 @@ class MailController {
      */
     public function sendEmail(array $email_details, $file_name = null) {
         try {
-            $this->mail->setFrom($_ENV['CONTACT_FROM'], $_ENV['CONTACT_NAME']);
+            $type = $file_name ? 'QUOTE' : 'CONTACT';
+            $this->mail->Username = $_ENV[$type . '_FROM'];
+            $this->mail->Password = $_ENV[$type . '_PASS'];
+            $this->mail->setFrom($_ENV[$type . '_FROM'], $_ENV[$type . '_NAME']);
             $this->mail->addAddress(strtolower($email_details['email']), ucwords($email_details['name']));
-            $this->mail->addReplyTo($_ENV['CONTACT_FROM'], $_ENV['CONTACT_NAME']);
-            $this->mail->addBCC($_ENV['CONTACT_FROM'], $_ENV['CONTACT_NAME']);
+            $this->mail->addReplyTo($_ENV[$type . '_FROM'], $_ENV[$type . '_NAME']);
+            $this->mail->addBCC($_ENV[$type . '_FROM'], $_ENV[$type . '_NAME']);
             $this->mail->isHTML(true);
             $this->mail->Subject = $email_details['subject'];
-            if ($file_name) {$this->mail->AddAttachment($file_name);}
+            if ($file_name) {
+                $this->mail->AddAttachment($file_name);
+            }
             $this->mail->Body = $this->createHtml([
                 'name' => $email_details['name'],
                 'phone' => $email_details['phone'],
@@ -87,7 +90,7 @@ class MailController {
             $response = [
                 'code' => 201,
                 'status' => 'Error',
-                'text' => "Mailer error: " . $this->mail->ErrorInfo,
+                'text' => "The mail server encountered a technical error. Please try agian later." //. $this->mail->ErrorInfo,
             ];
             return $response;
         }

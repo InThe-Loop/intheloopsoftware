@@ -541,7 +541,7 @@
 								<div class="address">
 									<i class="bi bi-geo-alt"></i>
 									<h4>Location:</h4>
-									<p>199 Uys Rd, Rynfield, Benoni, 1501</p>
+									<p>41 Richmond St, Crystal Park, Benoni, 1501</p>
 								</div>
 								<div class="phone">
 									<i class="bi bi-whatsapp"></i>
@@ -551,11 +551,11 @@
 								<div class="email">
 									<i class="bi bi-envelope"></i>
 									<h4>Email:</h4>
-									<p><a href="mailto:enquiries@intheloop.tech">enquiries@intheloop.tech</a></p>
+									<p><a href="mailto:enquiries@intheloop.tech">enquiries@intheloopsoftware.tech</a></p>
 								</div>
 								<div class="social-links">
 									<h4>Social links:</h4>
-									<a href="https://web.facebook.com/miss.vee.famous.look/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+									<a href="https://web.facebook.com/intheloop.software.solutions/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
 									<a href="https://www.instagram.com/missvee.online/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
 								</div>
 							</div>

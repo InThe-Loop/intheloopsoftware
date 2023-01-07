@@ -23,7 +23,7 @@ class MailController {
      * Class constructor
      */
     public function __construct() {
-        $dotenv = Dotenv::createImmutable(__DIR__ . '\..\..');
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
         $dotenv->load();
 
         // Create an email instance;

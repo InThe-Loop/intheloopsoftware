@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+ini_set("pcre.jit", "0");
 
 function get($route, $path_to_include) {
   	if( $_SERVER['REQUEST_METHOD'] == 'GET' ) {

@@ -62,7 +62,7 @@
 				<div class="container" data-aos="fade-up">
 					<div class="section-title">
 						<h2>About</h2>
-						<p>InTheLoop&trade; is a software development company dedicated to changing lives through sofware. Whatever your digital dreams, whatever you envision digitally; let us bring it to live.</p>
+						<p>InTheLoop&trade; is a software development company dedicated to changing lives through software. Whatever your digital dreams, whatever you envision digitally; let us bring it to live.</p>
 						<p>We are in the open-source software space. Website development is just one of our many talents. Think AR (Augmented Reality), IoT (Internet of Things), Gaming, Mobile App development, we got your back!
 						We are about new tech and new ideas. We sort of like to take the "road less travelled".</p>
 						<p>Our approach is different. We like to put you in the driver's seat to drive the direction of your product. Afterall, who knows the dream better than you!</p>

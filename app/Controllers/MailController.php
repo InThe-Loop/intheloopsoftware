@@ -4,10 +4,10 @@ namespace app\Controllers;
 
 require "./vendor/autoload.php";
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 use Dotenv\Dotenv;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 /**
  * PHP email class
@@ -90,7 +90,7 @@ class MailController {
             $response = [
                 'code' => 201,
                 'status' => 'Error',
-                'text' => "The mail server encountered a technical error. Please try agian later." //. $this->mail->ErrorInfo,
+                'text' => "The mail server encountered a technical error. Please try again later.", //$this->mail->ErrorInfo
             ];
             return $response;
         }

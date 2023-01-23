@@ -192,7 +192,7 @@ $html = '
                             <tr>
                                 <td class="col">
                                     <p>
-                                        <strong>Trading Address:</strong> 199 Uys Rd, Rynfield, Benoni, 1501<br />
+                                        <strong>Trading Address:</strong> 41 Richmond St, Crystal Park, Benoni, 1501<br />
                                         <strong>Co. Registration:</strong> 2021/905542/07<br />
                                         <strong>Contact:</strong> 068 103 7459<br />
                                         <strong>Email:</strong> services@intheloop.tech<br />

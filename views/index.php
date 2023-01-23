@@ -358,13 +358,13 @@
 							<section id="section1" class="section1">
 								<p>First off, please provide us with your contact details below.</p>
 								<div class="row">
-									<div class="col-md-4 form-group">
-										<input class="form-control maxlength" type="text" name="name" id="name" maxlength="30" placeholder="Your fullname" required />
-										<label id="name-error" class="packages-error-label"></label>
-									</div>
 									<div class="col-md-4 form-group mt-3 mt-md-0">
 										<input class="form-control" type="email" name="email" id="email" maxlength="255" placeholder="Your email address" required />
 										<label id="email-error" class="packages-error-label"></label>
+									</div>
+									<div class="col-md-4 form-group">
+										<input class="form-control maxlength" type="text" name="name" id="name" maxlength="30" placeholder="Your fullname" required />
+										<label id="name-error" class="packages-error-label"></label>
 									</div>
 									<div class="col-md-4 form-group">
 										<input class="form-control" type="number" name="phone" id="phone" maxlength="10" placeholder="Your phone number" required />

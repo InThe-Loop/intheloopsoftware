@@ -113,7 +113,7 @@ class MailController {
         $html .= '<tbody><tr><td align="left">';
         
         $html .= '<h1>Hi ' . $substitutes['name'] . '</h1>
-            <p>This is an acknowledgement that we have received your message containing the details below.</p>
+            <p>This is an acknowledgement that we have received your communication containing the details below.</p>
             <p>
                 Your telephone number:<br />
                 <div style="background-color: #ccc; padding: 10px;">' . $substitutes['phone'] . '</div>
@@ -123,7 +123,7 @@ class MailController {
                 <div style="background-color: #ccc; padding: 10px;">' . $substitutes['body'] . '</div>
             </p>
             <p>
-                We are busy attending to this message and we will be in touch as soon as possible.
+                We are busy attending to this communication and we will be in touch as soon as possible.
                 You may reply to this email, if you wish to do a follow up.
             </p>
             <p>

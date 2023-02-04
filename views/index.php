@@ -62,7 +62,7 @@
 				<div class="container" data-aos="fade-up">
 					<div class="section-title">
 						<h2>About</h2>
-						<p>InTheLoop&trade; is a software development company dedicated to changing lives through sofware. Whatever your digital dreams, whatever you envision digitally; let us bring it to live.</p>
+						<p>InTheLoop&trade; is a software development company dedicated to changing lives through software. Whatever your digital dreams, whatever you envision digitally; let us bring it to live.</p>
 						<p>We are in the open-source software space. Website development is just one of our many talents. Think AR (Augmented Reality), IoT (Internet of Things), Gaming, Mobile App development, we got your back!
 						We are about new tech and new ideas. We sort of like to take the "road less travelled".</p>
 						<p>Our approach is different. We like to put you in the driver's seat to drive the direction of your product. Afterall, who knows the dream better than you!</p>
@@ -541,7 +541,7 @@
 								<div class="address">
 									<i class="bi bi-geo-alt"></i>
 									<h4>Location:</h4>
-									<p>199 Uys Rd, Rynfield, Benoni, 1501</p>
+									<p>41 Richmond St, Crystal Park, Benoni, 1501</p>
 								</div>
 								<div class="phone">
 									<i class="bi bi-whatsapp"></i>
@@ -551,11 +551,11 @@
 								<div class="email">
 									<i class="bi bi-envelope"></i>
 									<h4>Email:</h4>
-									<p><a href="mailto:enquiries@intheloop.tech">enquiries@intheloop.tech</a></p>
+									<p><a href="mailto:enquiries@intheloop.tech">enquiries@intheloopsoftware.tech</a></p>
 								</div>
 								<div class="social-links">
 									<h4>Social links:</h4>
-									<a href="https://web.facebook.com/miss.vee.famous.look/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+									<a href="https://web.facebook.com/intheloop.software.solutions/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
 									<a href="https://www.instagram.com/missvee.online/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
 								</div>
 							</div>

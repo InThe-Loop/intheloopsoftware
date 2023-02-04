@@ -1,2 +1,5 @@
 .env
+.htaccess
+index.php
+intheloopsoftware*
 /vendor
